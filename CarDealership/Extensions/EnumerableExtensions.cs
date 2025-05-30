@@ -55,5 +55,28 @@ namespace CarDealership.Extensions
                 Підтверджено = order.IsApproved ? "Так" : "Ні"
             }).ToList();
         }
+
+        public static object ToComparisonTableData(this IEnumerable<Car> cars)
+        {
+            var oldest = cars.MinBy(car => car.BirthYear);
+            var youngest = cars.MaxBy(car => car.BirthYear);
+            var cheapest = cars.MinBy(car => car.Price);
+            var mostExpensive = cars.MaxBy(car => car.Price);
+            var fastest = cars.MaxBy(car => car.TechnicalCharacteristics.TopSpeed);
+            var slowest = cars.MinBy(car => car.TechnicalCharacteristics.TopSpeed);
+
+            return new List<object>
+            {
+                new
+                {
+                    Найновіший = $"{youngest.BrandName} - {youngest.BirthYear}",
+                    Найстарший = $"{oldest.BrandName} - {oldest.BirthYear}",
+                    Надешевіший = $"{cheapest.BrandName} - {cheapest.Price}",
+                    Найдорожчий = $"{mostExpensive.BrandName} - {mostExpensive.Price}",
+                    Найшвидший = $"{fastest.BrandName} - {fastest.TechnicalCharacteristics.TopSpeed}",
+                    Найповільніший = $"{slowest.BrandName} - {slowest.TechnicalCharacteristics.TopSpeed}"
+                }
+            };
+        }
     }
 }
