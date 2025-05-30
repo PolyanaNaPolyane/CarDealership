@@ -35,5 +35,25 @@ namespace CarDealership.Extensions
                 Бюджет = customer.Budget
             }).ToList();
         }
+
+        public static object ToTableData(this IEnumerable<Order> orders)
+        {
+            return orders.Select(order => new
+            {
+                Імʼя = order.CustomerName,
+                Телефон = order.ContactDetails.PhoneNumber,
+                Адреса = order.ContactDetails.Address,
+                Марка = order.BrandName,
+                Рік = order.BirthYear,
+                Обʼєм = order.TechnicalCharacteristics.EngineCapacity,
+                Швидкість = order.TechnicalCharacteristics.TopSpeed,
+                ТипДвигуна = order.TechnicalFeatures.EngineType.GetDisplayName(),
+                Коробка = order.TechnicalFeatures.GearboxType.GetDisplayName(),
+                Колір = order.TechnicalFeatures.Color,
+                Стан = order.TechnicalCondition.GetDisplayName(),
+                Ціна = order.Price,
+                Підтверджено = order.IsApproved ? "Так" : "Ні"
+            }).ToList();
+        }
     }
 }
