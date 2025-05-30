@@ -1,0 +1,68 @@
+[
+  {
+    "CustomerName": "Микола",
+    "ContactDetails": {
+      "PhoneNumber": "+380991860076",
+      "Address": "м. Полтава"
+    },
+    "BrandName": "Audi",
+    "BirthYear": 2023,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.0,
+      "TopSpeed": 280
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 0,
+      "Color": "Білий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13000.0,
+    "IsApproved": false,
+    "Id": 1
+  },
+  {
+    "CustomerName": "Марія",
+    "ContactDetails": {
+      "PhoneNumber": "+380931234567",
+      "Address": "м. Львів"
+    },
+    "BrandName": "BMW",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.5,
+      "TopSpeed": 250
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Чорний"
+    },
+    "TechnicalCondition": 1,
+    "Price": 17000.0,
+    "IsApproved": false,
+    "Id": 2
+  },
+  {
+    "CustomerName": "Марія",
+    "ContactDetails": {
+      "PhoneNumber": "+380931234567",
+      "Address": "м. Львів"
+    },
+    "BrandName": "BMW",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 3.0,
+      "TopSpeed": 260
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Синій"
+    },
+    "TechnicalCondition": 1,
+    "Price": 17900.0,
+    "IsApproved": false,
+    "Id": 3
+  }
+]
