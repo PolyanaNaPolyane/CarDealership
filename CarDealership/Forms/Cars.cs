@@ -17,7 +17,7 @@ namespace CarDealership.Forms
         }
 
         public string CarBrand => brandNameTextBox.Text;
-        public string CarYear => brandNameTextBox.Text;
+        public string CarYear => birthYearTextBox.Text;
         public TechnicalCondition? CarCondition => technicalConditionComboBox.SelectedIndex <= 0 ? null : (TechnicalCondition)(technicalConditionComboBox.SelectedIndex - 1);
         public IEnumerable<Car> FilteredCars => _carRepository.Get(CarBrand, CarYear, CarCondition);
         public IEnumerable<Car> FavouriteCars => _carRepository.Get().Where(car => car.IsFavourite);
@@ -36,6 +36,12 @@ namespace CarDealership.Forms
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            if (!filteredCarsGridView.IsSelectedRow())
+            {
+                this.ShowError("Оберіть автомобіль для видалення");
+                return;
+            }
+
             _carRepository.Delete(SelectedCar);
             filteredCarsGridView.DataSource = FilteredCars.ToTableData();
         }
@@ -49,6 +55,12 @@ namespace CarDealership.Forms
 
         private void editButton_Click(object sender, EventArgs e)
         {
+            if (!filteredCarsGridView.IsSelectedRow())
+            {
+                this.ShowError("Оберіть автомобіль для редагування");
+                return;
+            }
+
             var editCarForm = new UpsertCar(SelectedCar);
             editCarForm.ShowDialog(this);
             filteredCarsGridView.DataSource = FilteredCars.ToTableData();
@@ -56,6 +68,12 @@ namespace CarDealership.Forms
 
         private void toggleCarFavourite_Click(object sender, EventArgs e)
         {
+            if (!filteredCarsGridView.IsSelectedRow())
+            {
+                this.ShowError("Оберіть автомобіль для додавання/видалення обраного");
+                return;
+            }
+
             var carToToggleFavourite = SelectedCar;
             carToToggleFavourite.IsFavourite = !carToToggleFavourite.IsFavourite;
             _carRepository.Update(carToToggleFavourite);
