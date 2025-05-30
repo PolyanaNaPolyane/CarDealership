@@ -1,0 +1,342 @@
+[
+  {
+    "BrandName": "Audi",
+    "BirthYear": 2023,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.0,
+      "TopSpeed": 280
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 0,
+      "Color": "Білий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13000.0,
+    "IsFavourite": true,
+    "Id": 1
+  },
+  {
+    "BrandName": "BMW",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.5,
+      "TopSpeed": 250
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Чорний"
+    },
+    "TechnicalCondition": 1,
+    "Price": 17000.0,
+    "IsFavourite": false,
+    "Id": 2
+  },
+  {
+    "BrandName": "Toyota",
+    "BirthYear": 2021,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.8,
+      "TopSpeed": 210
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 0,
+      "Color": "Сірий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 14900.0,
+    "IsFavourite": false,
+    "Id": 3
+  },
+  {
+    "BrandName": "Volkswagen",
+    "BirthYear": 2020,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.0,
+      "TopSpeed": 220
+    },
+    "TechnicalFeatures": {
+      "EngineType": 2,
+      "GearboxType": 1,
+      "Color": "Синій"
+    },
+    "TechnicalCondition": 1,
+    "Price": 14000.0,
+    "IsFavourite": false,
+    "Id": 4
+  },
+  {
+    "BrandName": "Ford",
+    "BirthYear": 2019,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.6,
+      "TopSpeed": 200
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 0,
+      "Color": "Червоний"
+    },
+    "TechnicalCondition": 2,
+    "Price": 11500.0,
+    "IsFavourite": false,
+    "Id": 5
+  },
+  {
+    "BrandName": "Hyundai",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.4,
+      "TopSpeed": 190
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 1,
+      "Color": "Білий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13200.0,
+    "IsFavourite": false,
+    "Id": 6
+  },
+  {
+    "BrandName": "Mazda",
+    "BirthYear": 2020,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.2,
+      "TopSpeed": 230
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Сірий"
+    },
+    "TechnicalCondition": 1,
+    "Price": 15000.0,
+    "IsFavourite": true,
+    "Id": 7
+  },
+  {
+    "BrandName": "Kia",
+    "BirthYear": 2021,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.6,
+      "TopSpeed": 200
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 0,
+      "Color": "Синій"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13900.0,
+    "IsFavourite": false,
+    "Id": 8
+  },
+  {
+    "BrandName": "Nissan",
+    "BirthYear": 2018,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.5,
+      "TopSpeed": 180
+    },
+    "TechnicalFeatures": {
+      "EngineType": 2,
+      "GearboxType": 1,
+      "Color": "Чорний"
+    },
+    "TechnicalCondition": 2,
+    "Price": 10900.0,
+    "IsFavourite": false,
+    "Id": 9
+  },
+  {
+    "BrandName": "Renault",
+    "BirthYear": 2019,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.3,
+      "TopSpeed": 170
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 0,
+      "Color": "Білий"
+    },
+    "TechnicalCondition": 1,
+    "Price": 9900.0,
+    "IsFavourite": false,
+    "Id": 10
+  },
+  {
+    "BrandName": "BMW",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 3.0,
+      "TopSpeed": 260
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Синій"
+    },
+    "TechnicalCondition": 1,
+    "Price": 17900.0,
+    "IsFavourite": false,
+    "Id": 11
+  },
+  {
+    "BrandName": "Toyota",
+    "BirthYear": 2021,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.0,
+      "TopSpeed": 215
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 0,
+      "Color": "Срібний"
+    },
+    "TechnicalCondition": 0,
+    "Price": 14950.0,
+    "IsFavourite": true,
+    "Id": 12
+  },
+  {
+    "BrandName": "Volkswagen",
+    "BirthYear": 2020,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.1,
+      "TopSpeed": 225
+    },
+    "TechnicalFeatures": {
+      "EngineType": 2,
+      "GearboxType": 0,
+      "Color": "Чорний"
+    },
+    "TechnicalCondition": 1,
+    "Price": 14300.0,
+    "IsFavourite": true,
+    "Id": 13
+  },
+  {
+    "BrandName": "Ford",
+    "BirthYear": 2019,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.7,
+      "TopSpeed": 210
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Зелений"
+    },
+    "TechnicalCondition": 2,
+    "Price": 11900.0,
+    "IsFavourite": false,
+    "Id": 14
+  },
+  {
+    "BrandName": "Hyundai",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.5,
+      "TopSpeed": 195
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 1,
+      "Color": "Бежевий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13400.0,
+    "IsFavourite": false,
+    "Id": 15
+  },
+  {
+    "BrandName": "Mazda",
+    "BirthYear": 2020,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.3,
+      "TopSpeed": 235
+    },
+    "TechnicalFeatures": {
+      "EngineType": 2,
+      "GearboxType": 1,
+      "Color": "Блакитний"
+    },
+    "TechnicalCondition": 1,
+    "Price": 15400.0,
+    "IsFavourite": false,
+    "Id": 16
+  },
+  {
+    "BrandName": "Kia",
+    "BirthYear": 2021,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.7,
+      "TopSpeed": 205
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Сірий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13800.0,
+    "IsFavourite": true,
+    "Id": 17
+  },
+  {
+    "BrandName": "Nissan",
+    "BirthYear": 2018,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.6,
+      "TopSpeed": 185
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 1,
+      "Color": "Білий"
+    },
+    "TechnicalCondition": 2,
+    "Price": 10800.0,
+    "IsFavourite": false,
+    "Id": 18
+  },
+  {
+    "BrandName": "Renault",
+    "BirthYear": 2019,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.4,
+      "TopSpeed": 175
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 0,
+      "Color": "Червоний"
+    },
+    "TechnicalCondition": 1,
+    "Price": 9800.0,
+    "IsFavourite": false,
+    "Id": 19
+  },
+  {
+    "BrandName": "Audi",
+    "BirthYear": 2023,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.2,
+      "TopSpeed": 265
+    },
+    "TechnicalFeatures": {
+      "EngineType": 2,
+      "GearboxType": 1,
+      "Color": "Чорний"
+    },
+    "TechnicalCondition": 0,
+    "Price": 15900.0,
+    "IsFavourite": false,
+    "Id": 20
+  }
+]
