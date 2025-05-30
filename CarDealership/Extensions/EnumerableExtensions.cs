@@ -19,5 +19,21 @@ namespace CarDealership.Extensions
                 Ціна = car.Price
             }).ToList();
         }
+
+        public static object ToTableData(this IEnumerable<Customer> customers)
+        {
+            return customers.Select(customer => new
+            {
+                Імʼя = customer.Name,
+                Телефон = customer.ContactDetails.PhoneNumber,
+                Адреса = customer.ContactDetails.Address,
+                БажанаМарка = customer.Requirements.BrandName,
+                БажанийРік = customer.Requirements.BirthYear,
+                БажанийОбʼєм = customer.Requirements.TechnicalCharacteristics.EngineCapacity,
+                БажанаШвидкість = customer.Requirements.TechnicalCharacteristics.TopSpeed,
+                БажанийСтан = customer.Requirements.TechnicalCondition.GetDisplayName(),
+                Бюджет = customer.Budget
+            }).ToList();
+        }
     }
 }
