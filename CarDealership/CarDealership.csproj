@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 
   <ItemGroup>
