@@ -1,0 +1,182 @@
+[
+  {
+    "Name": "Микола",
+    "ContactDetails": {
+      "PhoneNumber": "+380991860076",
+      "Address": "м. Полтава"
+    },
+    "Requirements": {
+      "BrandName": "Audi",
+      "BirthYear": 2023,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 2.0,
+        "TopSpeed": 256
+      },
+      "TechnicalCondition": 0
+    },
+    "Budget": 16000.0,
+    "Id": 1
+  },
+  {
+    "Name": "Марія",
+    "ContactDetails": {
+      "PhoneNumber": "+380931234567",
+      "Address": "м. Львів"
+    },
+    "Requirements": {
+      "BrandName": "BMW",
+      "BirthYear": 2022,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 2.5,
+        "TopSpeed": 240
+      },
+      "TechnicalCondition": 1
+    },
+    "Budget": 18000.0,
+    "Id": 2
+  },
+  {
+    "Name": "Олексій",
+    "ContactDetails": {
+      "PhoneNumber": "+380661112233",
+      "Address": "м. Київ"
+    },
+    "Requirements": {
+      "BrandName": "Toyota",
+      "BirthYear": 2021,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 1.8,
+        "TopSpeed": 210
+      },
+      "TechnicalCondition": 0
+    },
+    "Budget": 15000.0,
+    "Id": 3
+  },
+  {
+    "Name": "Ірина",
+    "ContactDetails": {
+      "PhoneNumber": "+380991111111",
+      "Address": "м. Харків"
+    },
+    "Requirements": {
+      "BrandName": "Volkswagen",
+      "BirthYear": 2020,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 2.0,
+        "TopSpeed": 220
+      },
+      "TechnicalCondition": 1
+    },
+    "Budget": 14500.0,
+    "Id": 4
+  },
+  {
+    "Name": "Андрій",
+    "ContactDetails": {
+      "PhoneNumber": "+380501234567",
+      "Address": "м. Дніпро"
+    },
+    "Requirements": {
+      "BrandName": "Ford",
+      "BirthYear": 2019,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 1.6,
+        "TopSpeed": 200
+      },
+      "TechnicalCondition": 2
+    },
+    "Budget": 12000.0,
+    "Id": 5
+  },
+  {
+    "Name": "Олена",
+    "ContactDetails": {
+      "PhoneNumber": "+380932222222",
+      "Address": "м. Одеса"
+    },
+    "Requirements": {
+      "BrandName": "Hyundai",
+      "BirthYear": 2022,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 1.4,
+        "TopSpeed": 190
+      },
+      "TechnicalCondition": 0
+    },
+    "Budget": 13500.0,
+    "Id": 6
+  },
+  {
+    "Name": "Тарас",
+    "ContactDetails": {
+      "PhoneNumber": "+380682345678",
+      "Address": "м. Івано-Франківськ"
+    },
+    "Requirements": {
+      "BrandName": "Mazda",
+      "BirthYear": 2020,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 2.2,
+        "TopSpeed": 230
+      },
+      "TechnicalCondition": 1
+    },
+    "Budget": 15500.0,
+    "Id": 7
+  },
+  {
+    "Name": "Катерина",
+    "ContactDetails": {
+      "PhoneNumber": "+380671234567",
+      "Address": "м. Чернівці"
+    },
+    "Requirements": {
+      "BrandName": "Kia",
+      "BirthYear": 2021,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 1.6,
+        "TopSpeed": 200
+      },
+      "TechnicalCondition": 0
+    },
+    "Budget": 14000.0,
+    "Id": 8
+  },
+  {
+    "Name": "Сергій",
+    "ContactDetails": {
+      "PhoneNumber": "+380631111222",
+      "Address": "м. Тернопіль"
+    },
+    "Requirements": {
+      "BrandName": "Nissan",
+      "BirthYear": 2018,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 1.5,
+        "TopSpeed": 180
+      },
+      "TechnicalCondition": 2
+    },
+    "Budget": 11000.0,
+    "Id": 9
+  },
+  {
+    "Name": "Анастасія",
+    "ContactDetails": {
+      "PhoneNumber": "+380991234888",
+      "Address": "м. Запоріжжя"
+    },
+    "Requirements": {
+      "BrandName": "Renault",
+      "BirthYear": 2019,
+      "TechnicalCharacteristics": {
+        "EngineCapacity": 1.3,
+        "TopSpeed": 170
+      },
+      "TechnicalCondition": 1
+    },
+    "Budget": 10000.0,
+    "Id": 10
+  }
+]
