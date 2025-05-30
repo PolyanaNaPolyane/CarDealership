@@ -86,6 +86,7 @@
             customersMenuItem.Name = "customersMenuItem";
             customersMenuItem.Size = new Size(79, 24);
             customersMenuItem.Text = "Покупці";
+            customersMenuItem.Click += customersMenuItem_Click;
             // 
             // ordersMenuItem
             // 

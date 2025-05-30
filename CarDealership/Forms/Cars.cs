@@ -61,5 +61,10 @@ namespace CarDealership.Forms
             _carRepository.Update(carToToggleFavourite);
             favouriteCarsGridView.DataSource = FavouriteCars.ToTableData();
         }
+
+        private void customersMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show<Customers>();
+        }
     }
 }
