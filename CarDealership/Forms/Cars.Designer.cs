@@ -93,6 +93,7 @@
             ordersMenuItem.Name = "ordersMenuItem";
             ordersMenuItem.Size = new Size(71, 24);
             ordersMenuItem.Text = "Заявки";
+            ordersMenuItem.Click += ordersMenuItem_Click;
             // 
             // carsComparisonMenuItem
             // 

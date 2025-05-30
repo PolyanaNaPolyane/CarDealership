@@ -66,5 +66,10 @@ namespace CarDealership.Forms
         {
             this.Show<Customers>();
         }
+
+        private void ordersMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show<Orders>();
+        }
     }
 }
