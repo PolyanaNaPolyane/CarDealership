@@ -9,10 +9,5 @@
             formToShow.Show();
             form.Hide();
         }
-
-        public static void ShowError(this Form form, string message)
-        {
-            MessageBox.Show(message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
     }
 }

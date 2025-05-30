@@ -2,6 +2,7 @@
 using CarDealership.Enums;
 using CarDealership.Extensions;
 using CarDealership.Repositories;
+using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
@@ -31,6 +32,12 @@ namespace CarDealership.Forms
 
         private void filterButton_Click(object sender, EventArgs e)
         {
+            if (!ValidationUtil.IsValidBirthYear(birthYearTextBox))
+            {
+                MessageUtil.ShowError($"Рік повинен бути числом від 1950 до {DateTime.Now.Year}");
+                return;
+            }
+
             filteredCarsGridView.DataSource = FilteredCars.ToTableData();
         }
 
@@ -38,7 +45,7 @@ namespace CarDealership.Forms
         {
             if (!filteredCarsGridView.IsSelectedRow())
             {
-                this.ShowError("Оберіть автомобіль для видалення");
+                MessageUtil.ShowError("Оберіть автомобіль для видалення");
                 return;
             }
 
@@ -57,7 +64,7 @@ namespace CarDealership.Forms
         {
             if (!filteredCarsGridView.IsSelectedRow())
             {
-                this.ShowError("Оберіть автомобіль для редагування");
+                MessageUtil.ShowError("Оберіть автомобіль для редагування");
                 return;
             }
 
@@ -70,7 +77,7 @@ namespace CarDealership.Forms
         {
             if (!filteredCarsGridView.IsSelectedRow())
             {
-                this.ShowError("Оберіть автомобіль для додавання/видалення обраного");
+                MessageUtil.ShowError("Оберіть автомобіль для додавання/видалення обраного");
                 return;
             }
 
