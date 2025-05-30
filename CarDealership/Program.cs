@@ -1,3 +1,5 @@
+using CarDealership.Forms;
+
 namespace CarDealership
 {
     public static class Program
@@ -6,7 +8,7 @@ namespace CarDealership
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Cars());
         }
     }
 }
