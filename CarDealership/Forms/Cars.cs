@@ -71,5 +71,10 @@ namespace CarDealership.Forms
         {
             this.Show<Orders>();
         }
+
+        private void carsComparisonMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show<CarsComparison>();
+        }
     }
 }

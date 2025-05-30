@@ -100,6 +100,7 @@
             carsComparisonMenuItem.Name = "carsComparisonMenuItem";
             carsComparisonMenuItem.Size = new Size(107, 24);
             carsComparisonMenuItem.Text = "Порівняння";
+            carsComparisonMenuItem.Click += carsComparisonMenuItem_Click;
             // 
             // brandNameTextBox
             // 
