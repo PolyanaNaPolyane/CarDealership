@@ -87,7 +87,7 @@
             // 
             // upsertButton
             // 
-            upsertButton.Location = new Point(91, 441);
+            upsertButton.Location = new Point(108, 432);
             upsertButton.Name = "upsertButton";
             upsertButton.Size = new Size(94, 29);
             upsertButton.TabIndex = 37;
