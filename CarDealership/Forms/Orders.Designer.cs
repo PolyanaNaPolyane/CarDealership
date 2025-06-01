@@ -60,7 +60,7 @@
             approveButton.TabIndex = 15;
             approveButton.Text = "Підтвердити";
             approveButton.UseVisualStyleBackColor = true;
-            approveButton.Click += toggleOrderApproving_Click;
+            approveButton.Click += approveButton_Click;
             // 
             // deleteButton
             // 
@@ -80,7 +80,7 @@
             rejectButton.TabIndex = 17;
             rejectButton.Text = "Відхилити";
             rejectButton.UseVisualStyleBackColor = true;
-            rejectButton.Click += toggleOrderApproving_Click;
+            rejectButton.Click += rejectButton_Click;
             // 
             // Orders
             // 
