@@ -29,7 +29,7 @@ namespace CarDealership.Forms
 
         private void rejectButton_Click(object sender, EventArgs e)
         {
-            ToggleOrderApproving(true, "Оберіть заявку для відхилення");
+            ToggleOrderApproving(false, "Оберіть заявку для відхилення");
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -53,6 +53,13 @@ namespace CarDealership.Forms
             }
 
             var orderToToggleApproving = SelectedOrder;
+
+            if (orderToToggleApproving.IsApproved == isApproved)
+            {
+                MessageUtil.ShowError($"Заявку вже {(isApproved ? "підтверджено" : "відхилено")}");
+                return;
+            }
+
             orderToToggleApproving.IsApproved = isApproved;
             _orderRepository.Update(orderToToggleApproving);
             ordersGridView.DataSource = _orderRepository.Entities.ToTableData();

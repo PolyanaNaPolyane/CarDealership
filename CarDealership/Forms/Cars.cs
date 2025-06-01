@@ -90,6 +90,13 @@ namespace CarDealership.Forms
             }
 
             var carToAddFavourite = SelectedCar;
+
+            if (FavouriteCars.Contains(carToAddFavourite))
+            {
+                MessageUtil.ShowError("Автомобіль вже доданий до обраного");
+                return;
+            }
+
             carToAddFavourite.IsFavourite = true;
             _carRepository.Update(carToAddFavourite);
             favouriteCarsGridView.DataSource = FavouriteCars.ToTableData();

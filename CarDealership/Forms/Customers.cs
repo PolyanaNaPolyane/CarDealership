@@ -107,5 +107,10 @@ namespace CarDealership.Forms
 
             carsByCustomerGridView.DataSource = CarsByCustomer(SelectedCustomer).ToTableData();
         }
+
+        private void customersGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            carsByCustomerGridView.DataSource = null;
+        }
     }
 }

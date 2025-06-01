@@ -89,6 +89,7 @@
             customersGridView.ShowEditingIcon = false;
             customersGridView.Size = new Size(675, 175);
             customersGridView.TabIndex = 13;
+            customersGridView.SelectionChanged += customersGridView_SelectionChanged;
             // 
             // carsByCustomerGridView
             // 
