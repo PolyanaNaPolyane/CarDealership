@@ -73,6 +73,12 @@ namespace CarDealership.Forms
                 IsFavourite = false
             };
 
+            if (_carRepository.Contains(car))
+            {
+                MessageUtil.ShowError("Автомобіль вже існує");
+                return;
+            }
+
             if (_car == null)
             {
                 _carRepository.Add(car);

@@ -33,7 +33,11 @@ namespace CarDealership.Repositories
                     && string.Equals(c.BrandName, car.BrandName, StringComparison.OrdinalIgnoreCase)
                     && c.BirthYear == car.BirthYear
                     && c.TechnicalCharacteristics.EngineCapacity == car.TechnicalCharacteristics.EngineCapacity
-                    && c.TechnicalFeatures.EngineType == car.TechnicalFeatures.EngineType)
+                    && c.TechnicalFeatures.EngineType == car.TechnicalFeatures.EngineType
+                    && c.TechnicalFeatures.GearboxType == car.TechnicalFeatures.GearboxType
+                    && c.TechnicalFeatures.Color == car.TechnicalFeatures.Color
+                    && c.TechnicalCondition == car.TechnicalCondition
+                    && c.Price == car.Price)
                 .Any();
         }
 
