@@ -289,7 +289,7 @@
             addFavouriteButton.TabIndex = 16;
             addFavouriteButton.Text = "Додати в обране";
             addFavouriteButton.UseVisualStyleBackColor = true;
-            addFavouriteButton.Click += toggleCarFavourite_Click;
+            addFavouriteButton.Click += addFavouriteButton_Click;
             // 
             // deleteFavouriteButton
             // 
@@ -299,7 +299,7 @@
             deleteFavouriteButton.TabIndex = 17;
             deleteFavouriteButton.Text = "Видалити обране";
             deleteFavouriteButton.UseVisualStyleBackColor = true;
-            deleteFavouriteButton.Click += toggleCarFavourite_Click;
+            deleteFavouriteButton.Click += deleteFavouriteButton_Click;
             // 
             // favouriteCarsGridView
             // 

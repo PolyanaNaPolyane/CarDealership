@@ -1,7 +1,9 @@
-﻿using CarDealership.Entities;
+﻿using System.Text;
+using CarDealership.Entities;
 using CarDealership.Enums;
 using CarDealership.Interfaces;
 using CarDealership.Repositories;
+using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
@@ -43,6 +45,14 @@ namespace CarDealership.Forms
 
         private void upsertButton_Click(object sender, EventArgs e)
         {
+            var errors = GetValidationErrors();
+
+            if (errors.Length != 0)
+            {
+                MessageUtil.ShowError(errors.ToString());
+                return;
+            }
+
             var customer = new Customer
             {
                 Id = _customer?.Id ?? _customerRepository.NextId,
@@ -76,6 +86,35 @@ namespace CarDealership.Forms
             }
 
             Close();
+        }
+
+        private StringBuilder GetValidationErrors()
+        {
+            var errors = new StringBuilder();
+            int errorNumber = 1;
+
+            void AppendIfInvalid(bool isValid, string message)
+            {
+                if (isValid)
+                {
+                    return;
+                }
+
+                errors.AppendLine($"{errorNumber}) {message}");
+                errorNumber++;
+            }
+
+            AppendIfInvalid(nameTextBox.IsValidUserName(out var invalidNameMessage), invalidNameMessage);
+            AppendIfInvalid(phoneNumberTextBox.IsValidPhoneNumber(out var invalidPhoneNumberMessage), invalidPhoneNumberMessage);
+            AppendIfInvalid(addressTextBox.IsValidAddress(out var invalidAddressMessage), invalidAddressMessage);
+            AppendIfInvalid(brandNameTextBox.IsValidBrandName(out var invalidBrandNameMessage), invalidBrandNameMessage);
+            AppendIfInvalid(birthYearTextBox.IsValidBirthYear(out var invalidBirthYearMessage), invalidBirthYearMessage);
+            AppendIfInvalid(engineCapacityTextBox.IsValidEngineCapacity(out var invalidEngineCapacityMessage), invalidEngineCapacityMessage);
+            AppendIfInvalid(topSpeedTextBox.IsValidTopSpeed(out var invalidTopSpeedMessage), invalidTopSpeedMessage);
+            AppendIfInvalid(technicalConditionComboBox.IsValidTechnicalCondition(out var invalidTechnicalConditionMessage), invalidTechnicalConditionMessage);
+            AppendIfInvalid(budgetTextBox.IsValidBudget(out var invalidBudgetMessage), invalidBudgetMessage);
+
+            return errors;
         }
     }
 }

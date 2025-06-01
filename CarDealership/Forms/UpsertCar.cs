@@ -1,7 +1,9 @@
-﻿using CarDealership.Entities;
+﻿using System.Text;
+using CarDealership.Entities;
 using CarDealership.Enums;
 using CarDealership.Interfaces;
 using CarDealership.Repositories;
+using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
@@ -43,6 +45,14 @@ namespace CarDealership.Forms
 
         private void upsertButton_Click(object sender, EventArgs e)
         {
+            var errors = GetValidationErrors();
+
+            if (errors.Length != 0)
+            {
+                MessageUtil.ShowError(errors.ToString());
+                return;
+            }
+
             var car = new Car
             {
                 Id = _car?.Id ?? _carRepository.NextId,
@@ -74,6 +84,35 @@ namespace CarDealership.Forms
             }
 
             Close();
+        }
+
+        private StringBuilder GetValidationErrors()
+        {
+            var errors = new StringBuilder();
+            int errorNumber = 1;
+
+            void AppendIfInvalid(bool isValid, string message)
+            {
+                if (isValid)
+                {
+                    return;
+                }
+
+                errors.AppendLine($"{errorNumber}) {message}");
+                errorNumber++;
+            }
+
+            AppendIfInvalid(brandNameTextBox.IsValidBrandName(out var invalidBrandNameMessage), invalidBrandNameMessage);
+            AppendIfInvalid(birthYearTextBox.IsValidBirthYear(out var invalidBirthYearMessage), invalidBirthYearMessage);
+            AppendIfInvalid(engineCapacityTextBox.IsValidEngineCapacity(out var invalidEngineCapacityMessage), invalidEngineCapacityMessage);
+            AppendIfInvalid(topSpeedTextBox.IsValidTopSpeed(out var invalidTopSpeedMessage), invalidTopSpeedMessage);
+            AppendIfInvalid(engineTypeComboBox.IsValidEngineType(out var invalidEngineTypeMessage), invalidEngineTypeMessage);
+            AppendIfInvalid(gearboxTypeComboBox.IsValidGearboxType(out var invalidGearboxTypeMessage), invalidGearboxTypeMessage);
+            AppendIfInvalid(colorComboBox.IsValidColor(out var invalidColorMessage), invalidColorMessage);
+            AppendIfInvalid(technicalConditionComboBox.IsValidTechnicalCondition(out var invalidTechnicalConditionMessage), invalidTechnicalConditionMessage);
+            AppendIfInvalid(priceTextBox.IsValidPrice(out var invalidPriceMessage), invalidPriceMessage);
+
+            return errors;
         }
     }
 }

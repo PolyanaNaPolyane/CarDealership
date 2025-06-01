@@ -23,6 +23,7 @@ namespace CarDealership.Forms
         public IEnumerable<Car> FilteredCars => _carRepository.Get(CarBrand, CarYear, CarCondition);
         public IEnumerable<Car> FavouriteCars => _carRepository.Get().Where(car => car.IsFavourite);
         public Car SelectedCar => FilteredCars.ToList()[filteredCarsGridView.SelectedRows[0].Index];
+        public Car SelectedFavouriteCar => FavouriteCars.ToList()[favouriteCarsGridView.SelectedRows[0].Index];
 
         private void InitializeTables()
         {
@@ -32,13 +33,19 @@ namespace CarDealership.Forms
 
         private void filterButton_Click(object sender, EventArgs e)
         {
-            if (!ValidationUtil.IsValidBirthYear(birthYearTextBox))
+            if (!string.IsNullOrWhiteSpace(birthYearTextBox.Text) && !birthYearTextBox.IsValidBirthYear(out var message))
             {
-                MessageUtil.ShowError($"Рік повинен бути числом від 1950 до {DateTime.Now.Year}");
+                MessageUtil.ShowError(message);
                 return;
             }
 
-            filteredCarsGridView.DataSource = FilteredCars.ToTableData();
+            var filteredCars = FilteredCars;
+            filteredCarsGridView.DataSource = filteredCars.ToTableData();
+
+            if (filteredCars.Count() == 0)
+            {
+                MessageUtil.ShowInformation("Автомобілі за заданим фільтром не знайдено");
+            }
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -73,17 +80,31 @@ namespace CarDealership.Forms
             filteredCarsGridView.DataSource = FilteredCars.ToTableData();
         }
 
-        private void toggleCarFavourite_Click(object sender, EventArgs e)
+        private void addFavouriteButton_Click(object sender, EventArgs e)
         {
             if (!filteredCarsGridView.IsSelectedRow())
             {
-                MessageUtil.ShowError("Оберіть автомобіль для додавання/видалення обраного");
+                MessageUtil.ShowError("Оберіть автомобіль для додавання обраного");
                 return;
             }
 
-            var carToToggleFavourite = SelectedCar;
-            carToToggleFavourite.IsFavourite = !carToToggleFavourite.IsFavourite;
-            _carRepository.Update(carToToggleFavourite);
+            var carToAddFavourite = SelectedCar;
+            carToAddFavourite.IsFavourite = true;
+            _carRepository.Update(carToAddFavourite);
+            favouriteCarsGridView.DataSource = FavouriteCars.ToTableData();
+        }
+
+        private void deleteFavouriteButton_Click(object sender, EventArgs e)
+        {
+            if (!favouriteCarsGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть автомобіль для видалення обраного");
+                return;
+            }
+
+            var carToDeleteFavourite = SelectedFavouriteCar;
+            carToDeleteFavourite.IsFavourite = false;
+            _carRepository.Update(carToDeleteFavourite);
             favouriteCarsGridView.DataSource = FavouriteCars.ToTableData();
         }
 
