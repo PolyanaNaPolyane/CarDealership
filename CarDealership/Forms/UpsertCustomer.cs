@@ -2,14 +2,13 @@
 using CarDealership.Entities;
 using CarDealership.Enums;
 using CarDealership.Interfaces;
-using CarDealership.Repositories;
 using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
     public partial class UpsertCustomer : Form
     {
-        private readonly ICustomerRepository _customerRepository = new CustomerRepository();
+        private readonly ICustomerRepository _customerRepository = RepositoryFactoryUtil.CustomerRepository;
         private readonly Customer _customer;
 
         public UpsertCustomer(Customer customer = null)

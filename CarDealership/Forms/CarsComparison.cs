@@ -1,13 +1,13 @@
 ﻿using CarDealership.Entities;
 using CarDealership.Extensions;
 using CarDealership.Interfaces;
-using CarDealership.Repositories;
+using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
     public partial class CarsComparison : Form
     {
-        private readonly ICarRepository _carRepository = new CarRepository();
+        private readonly ICarRepository _carRepository = RepositoryFactoryUtil.CarRepository;
         private readonly List<Car> _carsToCompare = new List<Car>();
 
         public CarsComparison()

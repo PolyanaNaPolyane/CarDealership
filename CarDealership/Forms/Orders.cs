@@ -1,13 +1,13 @@
 ﻿using CarDealership.Entities;
 using CarDealership.Extensions;
 using CarDealership.Interfaces;
-using CarDealership.Repositories;
+using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
     public partial class Orders : Form
     {
-        private readonly IOrderRepository _orderRepository = new OrderRepository();
+        private readonly IOrderRepository _orderRepository = RepositoryFactoryUtil.OrderRepository;
 
         public Orders()
         {

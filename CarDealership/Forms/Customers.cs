@@ -1,15 +1,15 @@
 ﻿using CarDealership.Entities;
 using CarDealership.Extensions;
 using CarDealership.Interfaces;
-using CarDealership.Repositories;
+using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
     public partial class Customers : Form
     {
-        private readonly ICustomerRepository _customerRepository = new CustomerRepository();
-        private readonly ICarRepository _carRepository = new CarRepository();
-        private readonly IOrderRepository _orderRepository = new OrderRepository();
+        private readonly ICustomerRepository _customerRepository = RepositoryFactoryUtil.CustomerRepository;
+        private readonly ICarRepository _carRepository = RepositoryFactoryUtil.CarRepository;
+        private readonly IOrderRepository _orderRepository = RepositoryFactoryUtil.OrderRepository;
 
         public Customers()
         {

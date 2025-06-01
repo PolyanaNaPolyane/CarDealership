@@ -1,14 +1,14 @@
 ﻿using CarDealership.Entities;
 using CarDealership.Enums;
 using CarDealership.Extensions;
-using CarDealership.Repositories;
+using CarDealership.Interfaces;
 using CarDealership.Utils;
 
 namespace CarDealership.Forms
 {
     public partial class Cars : Form
     {
-        private readonly CarRepository _carRepository = new CarRepository();
+        private readonly ICarRepository _carRepository = RepositoryFactoryUtil.CarRepository;
 
         public Cars()
         {
