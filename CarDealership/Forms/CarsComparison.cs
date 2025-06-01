@@ -43,7 +43,15 @@ namespace CarDealership.Forms
                 return;
             }
 
-            _carsToCompare.Add(CarToAddForComparison);
+            var carToAddForComparison = CarToAddForComparison;
+
+            if (_carsToCompare.Contains(carToAddForComparison))
+            {
+                MessageUtil.ShowError("Автомобіль вже доданий до порівняння");
+                return;
+            }
+
+            _carsToCompare.Add(carToAddForComparison);
             carsToCompareGridView.DataSource = _carsToCompare.ToTableData();
         }
 
