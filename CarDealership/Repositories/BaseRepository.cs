@@ -4,7 +4,7 @@ using CarDealership.Interfaces;
 
 namespace CarDealership.Repositories
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : Entity
+    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : Entity
     {
         private readonly string _filePath;
 
