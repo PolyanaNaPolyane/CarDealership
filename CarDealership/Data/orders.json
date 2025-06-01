@@ -64,5 +64,71 @@
     "Price": 17900.0,
     "IsApproved": false,
     "Id": 3
+  },
+  {
+    "CustomerName": "Олексій",
+    "ContactDetails": {
+      "PhoneNumber": "+380661112233",
+      "Address": "м. Київ"
+    },
+    "BrandName": "Toyota",
+    "BirthYear": 2021,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.8,
+      "TopSpeed": 210
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 0,
+      "Color": "Сірий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 14900.0,
+    "IsApproved": false,
+    "Id": 4
+  },
+  {
+    "CustomerName": "Олена",
+    "ContactDetails": {
+      "PhoneNumber": "+380932222222",
+      "Address": "м. Одеса"
+    },
+    "BrandName": "Hyundai",
+    "BirthYear": 2022,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 1.4,
+      "TopSpeed": 190
+    },
+    "TechnicalFeatures": {
+      "EngineType": 1,
+      "GearboxType": 1,
+      "Color": "Білий"
+    },
+    "TechnicalCondition": 0,
+    "Price": 13200.0,
+    "IsApproved": false,
+    "Id": 5
+  },
+  {
+    "CustomerName": "Тарас",
+    "ContactDetails": {
+      "PhoneNumber": "+380682345678",
+      "Address": "м. Івано-Франківськ"
+    },
+    "BrandName": "Mazda",
+    "BirthYear": 2020,
+    "TechnicalCharacteristics": {
+      "EngineCapacity": 2.2,
+      "TopSpeed": 230
+    },
+    "TechnicalFeatures": {
+      "EngineType": 0,
+      "GearboxType": 1,
+      "Color": "Сірий"
+    },
+    "TechnicalCondition": 1,
+    "Price": 15000.0,
+    "IsApproved": false,
+    "Id": 6
   }
 ]
