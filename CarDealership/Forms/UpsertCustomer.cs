@@ -22,13 +22,13 @@ namespace CarDealership.Forms
         {
             if (_customer == null)
             {
-                Text = "Додати користувача";
+                Text = "Додати покупця";
                 upsertButton.Text = "Додати";
 
                 return;
             }
 
-            Text = "Редагувати користувача";
+            Text = "Редагувати покупця";
             upsertButton.Text = "Редагувати";
 
             nameTextBox.Text = _customer.Name;
@@ -74,6 +74,12 @@ namespace CarDealership.Forms
                 },
                 Budget = decimal.Parse(budgetTextBox.Text)
             };
+
+            if (_customerRepository.Contains(customer))
+            {
+                MessageUtil.ShowError("Покупець вже існує");
+                return;
+            }
 
             if (_customer == null)
             {
