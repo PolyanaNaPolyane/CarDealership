@@ -34,6 +34,12 @@ namespace CarDealership.Forms
 
         private void editButton_Click(object sender, EventArgs e)
         {
+            if (!customersGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть покупця для редагування");
+                return;
+            }
+
             var editCustomerForm = new UpsertCustomer(SelectedCustomer);
             editCustomerForm.ShowDialog(this);
             customersGridView.DataSource = _customerRepository.Entities.ToTableData();
@@ -41,12 +47,24 @@ namespace CarDealership.Forms
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            if (!customersGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть покупця для видалення");
+                return;
+            }
+
             _customerRepository.Delete(SelectedCustomer);
             customersGridView.DataSource = _customerRepository.Entities.ToTableData();
         }
 
         private void createOrderButton_Click(object sender, EventArgs e)
         {
+            if (!customersGridView.IsSelectedRow() || !carsByCustomerGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть покупця та автомобіль для створення заявки");
+                return;
+            }
+
             var selectedCustomer = SelectedCustomer;
             var selectedCarIndex = carsByCustomerGridView.SelectedRows[0].Index;
             var selectedCar = CarsByCustomer(selectedCustomer).ToList()[selectedCarIndex];
@@ -81,6 +99,12 @@ namespace CarDealership.Forms
 
         private void filterCarsByCustomerButton_Click(object sender, EventArgs e)
         {
+            if (!customersGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть покупця для підбору автомобіля");
+                return;
+            }
+
             carsByCustomerGridView.DataSource = CarsByCustomer(SelectedCustomer).ToTableData();
         }
     }
