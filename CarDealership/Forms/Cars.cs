@@ -58,6 +58,7 @@ namespace CarDealership.Forms
 
             _carRepository.Delete(SelectedCar);
             filteredCarsGridView.DataSource = FilteredCars.ToTableData();
+            favouriteCarsGridView.DataSource = FavouriteCars.ToTableData();
         }
 
         private void addButton_Click(object sender, EventArgs e)
