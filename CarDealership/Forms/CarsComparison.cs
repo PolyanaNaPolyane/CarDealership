@@ -26,17 +26,35 @@ namespace CarDealership.Forms
 
         private void compareButton_Click(object sender, EventArgs e)
         {
+            if (_carsToCompare.Count == 0)
+            {
+                MessageUtil.ShowError("Додайте автомобілі для порівняння");
+                return;
+            }
+
             comparisonGridView.DataSource = _carsToCompare.ToComparisonTableData();
         }
 
         private void addToComparisonButton_Click(object sender, EventArgs e)
         {
+            if (!carsGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть автомобіль для порівняння");
+                return;
+            }
+
             _carsToCompare.Add(CarToAddForComparison);
             carsToCompareGridView.DataSource = _carsToCompare.ToTableData();
         }
 
         private void deleteFromComparisonButton_Click(object sender, EventArgs e)
         {
+            if (!carsGridView.IsSelectedRow())
+            {
+                MessageUtil.ShowError("Оберіть автомобіль, який потрібно видалити з порівняння");
+                return;
+            }
+
             _carsToCompare.Remove(CarToDeleteFromComparison);
             carsToCompareGridView.DataSource = _carsToCompare.ToTableData();
         }
