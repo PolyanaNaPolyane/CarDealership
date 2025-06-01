@@ -6,6 +6,7 @@ namespace CarDealership.Interfaces
     public interface ICarRepository : IBaseRepository<Car>
     {
         public IEnumerable<Car> GetByCustomerRequirements(Customer customer);
+        public bool Contains(Car car);
         public IEnumerable<Car> Get(
             string brand = null,
             string year = null,

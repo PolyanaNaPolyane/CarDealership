@@ -25,6 +25,18 @@ namespace CarDealership.Repositories
             return filteredCars;
         }
 
+        public bool Contains(Car car)
+        {
+            return Entities
+                .Where(c =>
+                    c.Id != car.Id
+                    && string.Equals(c.BrandName, car.BrandName, StringComparison.OrdinalIgnoreCase)
+                    && c.BirthYear == car.BirthYear
+                    && c.TechnicalCharacteristics.EngineCapacity == car.TechnicalCharacteristics.EngineCapacity
+                    && c.TechnicalFeatures.EngineType == car.TechnicalFeatures.EngineType)
+                .Any();
+        }
+
         public IEnumerable<Car> Get(
             string brand = null,
             string year = null,
