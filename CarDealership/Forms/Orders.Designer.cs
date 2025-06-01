@@ -91,7 +91,10 @@
             Controls.Add(deleteButton);
             Controls.Add(approveButton);
             Controls.Add(ordersGridView);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Orders";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Заявки";
             ((System.ComponentModel.ISupportInitialize)ordersGridView).EndInit();
             ResumeLayout(false);

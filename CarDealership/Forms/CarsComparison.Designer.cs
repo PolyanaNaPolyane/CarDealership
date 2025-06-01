@@ -164,7 +164,10 @@
             Controls.Add(comparisonResultGroupBox);
             Controls.Add(carsToCompareGroupBox);
             Controls.Add(carsGroupBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "CarsComparison";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Порівняння машин";
             ((System.ComponentModel.ISupportInitialize)carsGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)carsToCompareGridView).EndInit();

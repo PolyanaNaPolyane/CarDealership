@@ -235,7 +235,10 @@
             Controls.Add(engineCapacityLabel);
             Controls.Add(birthYearLabel);
             Controls.Add(brandNameLabel);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "UpsertCar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UpsertCar";
             ResumeLayout(false);
             PerformLayout();

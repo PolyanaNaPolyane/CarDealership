@@ -160,7 +160,10 @@
             ClientSize = new Size(897, 460);
             Controls.Add(carsByCustomerGroupBox);
             Controls.Add(customersGroupBox);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Customers";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Покупці";
             ((System.ComponentModel.ISupportInitialize)customersGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)carsByCustomerGridView).EndInit();

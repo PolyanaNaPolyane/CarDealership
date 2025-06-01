@@ -241,7 +241,10 @@
             Controls.Add(phoneNumberLabel);
             Controls.Add(nameLabel);
             Controls.Add(upsertButton);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "UpsertCustomer";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "UpsertCustomer";
             requirementsGroupBox.ResumeLayout(false);
             requirementsGroupBox.PerformLayout();

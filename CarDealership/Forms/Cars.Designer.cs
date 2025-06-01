@@ -358,7 +358,10 @@
             Controls.Add(birthYearTextBox);
             Controls.Add(brandNameTextBox);
             Controls.Add(menu);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "Cars";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Автосалон";
             menu.ResumeLayout(false);
             menu.PerformLayout();
