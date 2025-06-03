@@ -105,6 +105,14 @@ namespace CarDealership.Forms
                 return;
             }
 
+            var carsByCustomer = CarsByCustomer(SelectedCustomer);
+
+            if (carsByCustomer.Count() == 0)
+            {
+                MessageUtil.ShowError("Автомобілі не знайдено");
+                return;
+            }
+
             carsByCustomerGridView.DataSource = CarsByCustomer(SelectedCustomer).ToTableData();
         }
 

@@ -54,6 +54,7 @@
             carsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             carsGridView.EditMode = DataGridViewEditMode.EditOnEnter;
             carsGridView.Location = new Point(17, 26);
+            carsGridView.MultiSelect = false;
             carsGridView.Name = "carsGridView";
             carsGridView.RowHeadersWidth = 51;
             carsGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

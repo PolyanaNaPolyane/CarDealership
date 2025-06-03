@@ -26,9 +26,9 @@ namespace CarDealership.Forms
 
         private void compareButton_Click(object sender, EventArgs e)
         {
-            if (_carsToCompare.Count == 0)
+            if (_carsToCompare.Count <= 1)
             {
-                MessageUtil.ShowError("Додайте автомобілі для порівняння");
+                MessageUtil.ShowError("Додайте 2 та більше автомобілей для порівняння");
                 return;
             }
 
