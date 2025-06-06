@@ -57,7 +57,7 @@ namespace CarDealership.Forms
 
         private void deleteFromComparisonButton_Click(object sender, EventArgs e)
         {
-            if (!carsGridView.IsSelectedRow())
+            if (!carsToCompareGridView.IsSelectedRow())
             {
                 MessageUtil.ShowError("Оберіть автомобіль, який потрібно видалити з порівняння");
                 return;
