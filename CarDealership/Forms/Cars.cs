@@ -130,5 +130,10 @@ namespace CarDealership.Forms
         {
             this.Show<CarsComparison>();
         }
+
+        private void aiConsultationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show<AiConsultation>();
+        }
     }
 }

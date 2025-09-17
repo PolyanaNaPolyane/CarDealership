@@ -33,6 +33,7 @@
             customersMenuItem = new ToolStripMenuItem();
             ordersMenuItem = new ToolStripMenuItem();
             carsComparisonMenuItem = new ToolStripMenuItem();
+            aiConsultationToolStripMenuItem = new ToolStripMenuItem();
             brandNameTextBox = new TextBox();
             birthYearTextBox = new TextBox();
             filterButton = new Button();
@@ -74,7 +75,7 @@
             // menu
             // 
             menu.ImageScalingSize = new Size(20, 20);
-            menu.Items.AddRange(new ToolStripItem[] { customersMenuItem, ordersMenuItem, carsComparisonMenuItem });
+            menu.Items.AddRange(new ToolStripItem[] { customersMenuItem, ordersMenuItem, carsComparisonMenuItem, aiConsultationToolStripMenuItem });
             menu.Location = new Point(0, 0);
             menu.Name = "menu";
             menu.Size = new Size(907, 28);
@@ -101,6 +102,13 @@
             carsComparisonMenuItem.Size = new Size(107, 24);
             carsComparisonMenuItem.Text = "Порівняння";
             carsComparisonMenuItem.Click += carsComparisonMenuItem_Click;
+            // 
+            // aiConsultationToolStripMenuItem
+            // 
+            aiConsultationToolStripMenuItem.Name = "aiConsultationToolStripMenuItem";
+            aiConsultationToolStripMenuItem.Size = new Size(115, 24);
+            aiConsultationToolStripMenuItem.Text = "Консультація";
+            aiConsultationToolStripMenuItem.Click += aiConsultationToolStripMenuItem_Click;
             // 
             // brandNameTextBox
             // 
@@ -406,5 +414,6 @@
         private DataGridView favouriteCarsGridView;
         private GroupBox carsGroupBox;
         private GroupBox favouriteGroupBox;
+        private ToolStripMenuItem aiConsultationToolStripMenuItem;
     }
 }

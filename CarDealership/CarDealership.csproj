@@ -6,14 +6,16 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>4f3b0c4b-9c49-4f2c-90df-d54f42aceefa</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Forms\" />
     <Folder Include="Data\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="GeminiSharp" Version="0.0.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
